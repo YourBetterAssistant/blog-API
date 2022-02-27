@@ -24,8 +24,8 @@ export class UsersService {
     const newUser = new this.user(user);
     return newUser.save();
   }
-  async updateUser(id: string, user: User): Promise<User> {
-    const updateUser = await this.user.findOneAndUpdate({ id }, user, {
+  async updateUser(id: string, user: any): Promise<any> {
+    const updateUser = await this.user.updateOne({ id }, user, {
       new: true,
     });
     return updateUser;

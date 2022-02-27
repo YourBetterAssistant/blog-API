@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { config } from 'dotenv';
 import { UsersModule } from './users/users.module';
 import { AccountModule } from './account/account.module';
+import { BlogModule } from './blog/blog.module';
 config();
 @Module({
   imports: [
@@ -14,6 +15,7 @@ config();
     }),
     UsersModule,
     AccountModule,
+    BlogModule,
   ],
   controllers: [],
   providers: [],
