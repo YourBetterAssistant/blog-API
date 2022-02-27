@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:5.12.1"],
             ["@typescript-eslint/parser", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:5.12.1"],
+            ["dotenv", "npm:16.0.0"],
             ["eslint", "npm:8.10.0"],
             ["eslint-config-prettier", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:8.4.0"],
             ["eslint-plugin-prettier", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:4.0.0"],
@@ -2939,6 +2940,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:5.12.1"],
             ["@typescript-eslint/parser", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:5.12.1"],
+            ["dotenv", "npm:16.0.0"],
             ["eslint", "npm:8.10.0"],
             ["eslint-config-prettier", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:8.4.0"],
             ["eslint-plugin-prettier", "virtual:66f92d8c873e887bfada596975ca63db1753694403d598f3c2066f88b5872a9676e353604c042b1b93bac7cf20fd3ebaa4111ea21365daaa7f04337b64373c03#npm:4.0.0"],
@@ -3818,6 +3820,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["domexception", "npm:2.0.1"],
             ["webidl-conversions", "npm:5.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["dotenv", [
+        ["npm:16.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.0-ef4a5ccded-664cebb51f.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:16.0.0"]
           ],
           "linkType": "HARD",
         }]
