@@ -53,7 +53,7 @@ export class AccountController {
     @UploadedFile() file: Express.Multer.File,
     @Req() req: Irequest,
   ): Promise<any> {
-    if (!file.mimetype.includes('image')) return HttpStatus.BAD_REQUEST;
+    if (file.mimetype.split('/')[0] !== 'image') return HttpStatus.BAD_REQUEST;
     return this.accountService.uploadAvatar(file, req);
   }
   @UseGuards(AuthenticatedGuard)
