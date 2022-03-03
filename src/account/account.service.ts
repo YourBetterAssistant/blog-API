@@ -13,6 +13,7 @@ export class AccountService {
     if (body.admin == null) {
       body.admin = false;
     }
+    if (!validateEmail(body.email)) return HttpStatus.BAD_REQUEST;
     if ((!req.user || !req.user.admin) && body.admin == true)
       return HttpStatus.FORBIDDEN;
     body.id = await this.userService.makeUniqueId();
@@ -50,4 +51,9 @@ export class AccountService {
     const Avatar = fs.readFileSync(avatar);
     return Avatar;
   }
+}
+function validateEmail(email: string) {
+  return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+    email,
+  );
 }
