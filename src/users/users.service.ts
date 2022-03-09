@@ -16,6 +16,10 @@ export class UsersService {
   }
   async findUserByAdmin(): Promise<User[]> {
     const user = await this.user.find({ admin: true });
+    user.forEach((u) => {
+      u.password = null;
+      u.email = null;
+    });
     return user;
   }
   async createUser(user: User): Promise<User> {

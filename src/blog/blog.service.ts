@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
 import { Blog } from './models/blog.schema';
 import { Model } from 'mongoose';
+import { User } from 'src/users/models/user.schema';
 
 @Injectable()
 export class BlogService {
@@ -28,5 +29,10 @@ export class BlogService {
     blog.date = Date.now();
     const newBlog = new this.blog(blog);
     return await newBlog.save();
+  }
+  async getAuthorById(author: string): Promise<User> {
+    return (await this.userService.findUserByAdmin()).find(
+      (a) => a.id === author,
+    );
   }
 }
